@@ -20,12 +20,16 @@ This repository includes a strict benchmark script (`qaoa_routing_benchmark_v2.p
 
 ## 📊 Results & Scaling Analysis
 
-![Benchmark Plot](benchmark_v2_plots_standard.png)
+<img width="4500" height="1800" alt="benchmark_v2_plots_standard" src="https://github.com/user-attachments/assets/fc3e49ed-6b9d-4700-bfb5-7f100cec1646" />
+
 
 **Key Findings:**
 1. **Combinatorial Explosion Avoided:** On 16-qubit dense/all-to-all topologies, the pre-compiler achieved a **~20% reduction** in both Transpiled CX operations and Circuit Depth.
 2. **Statistical Significance:** The improvement is highly stable. Across heavy configurations, the Wilcoxon/Holm corrected p-values were `< 0.0001` with a **100% win rate** over the baseline.
 3. **Topological Variance:** While dense graphs show exponential improvement, highly structured sparse topologies (like Rings) show diminishing returns at scale due to geometric embedding limits on the Heavy-Hex lattice.
+4. 👨‍💻 Author & Acknowledgements
+radiumQCO - Lead Researcher & Concept Designer.
+Note on Methodology: The conceptualization, critical analysis, and architectural direction of this research were driven by the author. The Python implementation, Qiskit integration, and statistical formatting were developed using AI-assisted pair programming (LLM).
 
 ## 🚀 How to Run
 Requirements: `pip install qiskit numpy pandas scipy matplotlib`
@@ -33,5 +37,3 @@ Requirements: `pip install qiskit numpy pandas scipy matplotlib`
 Run the benchmark (Standard mode generates the plots and CSVs):
 ```bash
 python qaoa_routing_benchmark_v2.py --mode standard
-👨‍💻 Author
-[radiumQCO] - Quantum Software Engineering & Research Enthusiast
