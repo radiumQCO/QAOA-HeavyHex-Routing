@@ -1,3 +1,8 @@
+Status: superseded by a newer routing approach.
+This repository contains my original static gate-ordering experiment. Further benchmarking showed that the initial reported improvement did not generalize to full QAOA compilation. I later moved to a different QAOA-specific routing approach: https://github.com/radiumQCO/QAOA-Hybrid-Routing
+
+
+
 # QAOA Hardware-Aware Routing Benchmark
 
 A heuristic pre-compiler and rigorous empirical benchmark demonstrating how hardware-aware distance sorting of commuting $ZZ$-interactions can significantly reduce transpilation overhead on IBM's Heavy-Hex architecture.
